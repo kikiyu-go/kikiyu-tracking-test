@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTM/GA4 转化跟踪测试</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; text-align: center; }
+        h1 { color: #333; }
+        p { color: #666; }
+    </style>
+</head>
+<body>
+    <h1>欢迎来到我的测试网站！</h1>
+    <p>这个网站用于 GTM/GA4 转化跟踪实践。</p>
+    <p>请点击右下角的聊天图标，尝试发送包含邮箱的消息。</p>
+    </body>
+</html>
