@@ -21,31 +21,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h1> 欢迎来到我的测试网站！</h1>
     <p>这个网站用于 GTM/GA4 转化跟踪实践。</p>
     <p>请点击右下角的聊天图标，尝试发送包含邮箱的消息。</p>
-    
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/68c3e4bd0b3548192e85858c/1j4ujb12k'; 
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    
-    <script>
-    var Tawk_API = Tawk_API || {};
-    Tawk_API.onChatMessageVisitor = function(data) {
-        var message = data.message.toLowerCase();
-        if (message.includes('@')) {
-            window.dataLayer = window.dataLayer || [];
-            dataLayer.push({
-                'event': 'tawk_chat_email_sent'
-            });
-        }
-    };
-    </script>
-    
 </body>
 </html>
