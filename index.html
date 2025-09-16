@@ -26,15 +26,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBCHSM4S"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h1>欢迎来到我的测试网站！</h1>
-    <p> 这个网站用于 GTM/GA4 转化跟踪实践。</p>
+    <p>这个网站用于 GTM/GA4 转化跟踪实践。</p>
 
-    <form id="submissionForm" action="?status=form_submitted_success" method="get">
+    <form id="submissionForm">
         <p>请填写以下信息：</p>
         <input type="text" name="name" placeholder="您的姓名" required><br>
         <input type="email" name="email" placeholder="您的邮箱地址" required><br>
         <textarea name="message" placeholder="您的留言" rows="4" required></textarea><br>
         <input type="submit" value="提交">
     </form>
+    
+    <script>
+        document.getElementById('submissionForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // 阻止表单默认提交行为
+            
+            // 手动修改URL，添加成功参数
+            var currentUrl = window.location.href;
+            var newUrl = currentUrl.split('?')[0] + '?status=form_submitted_success';
+            window.location.href = newUrl;
+        });
+    </script>
 </body>
 </html>
-
