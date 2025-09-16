@@ -13,13 +13,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         body { font-family: Arial, sans-serif; margin: 50px; text-align: center; }
         h1 { color: #333; }
         p { color: #666; }
+        /* 新增表单样式 */
+        form { margin-top: 30px; }
+        input[type="text"], input[type="email"], textarea { 
+            padding: 10px; width: 250px; margin: 5px 0; border-radius: 5px; border: 1px solid #ccc; 
+        }
+        input[type="submit"] { padding: 10px 20px; border: none; background-color: #007bff; color: white; border-radius: 5px; cursor: pointer; }
+        input[type="submit"]:hover { background-color: #0056b3; }
     </style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBCHSM4S"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<h1> 欢迎来到我的测试网站！</h1>
+<h1>欢迎来到我的测试网站！</h1>
     <p>这个网站用于 GTM/GA4 转化跟踪实践。</p>
-    <p>请点击右下角的聊天图标，尝试发送包含邮箱的消息。</p>
+
+    <form id="submissionForm" action="?status=form_submitted_success" method="get">
+        <p>请填写以下信息：</p>
+        <input type="text" name="name" placeholder="您的姓名" required><br>
+        <input type="email" name="email" placeholder="您的邮箱地址" required><br>
+        <textarea name="message" placeholder="您的留言" rows="4" required></textarea><br>
+        <input type="submit" value="提交">
+    </form>
 </body>
 </html>
